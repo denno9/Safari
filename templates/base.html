@@ -1,0 +1,179 @@
+{% load static  %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- <meta name="viewport" content="width=device=width=initial-scale=1.0"> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href='{% static "css/bootstrap.min.css"%}'>
+    <link rel="stylesheet" href='{% static "css/custome-css.css"%}'>
+    <link rel="stylesheet" href=' {% static "fontawesome-free-5.10.2-web/css/all.css"%}'>
+</head>
+
+<body>
+
+    <nav class="navbar  navbar-expand-sm   navbar-dark" style="height: 150px; z-index:50;">
+        <!-- <h4 class="text-center my-auto">Bel-LandSafaries</h4> -->
+        <div class="container">
+            <a href="{%url 'home'%}" class="navbar-brand">
+                <div class="d-flex flex-row">
+                    <div class="align-self-start ">
+                        <img src='{%static  "/images/land1.png"%}' alt="" style="height: 150px; ">
+                    </div>
+                    <div class="align-self-end d-none d-lg-block ">
+                        <h4 class=" brand text-center text-dark  " style="height: 90px;">Bel-Land Safaries</h4>
+                    </div>
+
+                </div>
+
+            </a>
+            <button class="navbar-toggler bg-dark" data-toggle="collapse" data-target="#homemenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse ul-index " id="homemenu">
+                <ul class="navbar-nav ml-auto  btn-light">
+
+                    <li class="nav-item">
+                        <button class=" btn btn-light bt-primary" data-toggle="modal" data-target="#destinations"
+                            style="font-size: 20px">Destinations</button>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'contact'%}" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'about'%}" class="nav-link">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+
+    {% endblock content %}
+
+
+
+    <footer class="footer text-white bg-dark">
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <div class="d-flex flex-row justify-content-center pt-3">
+                    <div class="pr-4 align-self-start">
+                        <span class="fab fa-twitter fa-2x"></span>
+                        <div>
+                            <h6>Twitter</h6>
+                        </div>
+                    </div>
+                    <div class="pr-4  align-self-center">
+                        <span class="fab fa-facebook fa-2x"></span>
+                        <div>
+                            <h6>FaceBook</h6>
+                        </div>
+                    </div>
+                    <div class="pr-4 align-self-end">
+                        <span class="fab fa-instagram fa-2x"></span>
+                        <div>
+                            <h6>Instagram</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="justify-content-center">
+                    <p>Copyright &copy; {{year}}</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <div class="modal  " id="destinations">
+        <div class="modal-dialog modal-xl " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close " data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body ">
+                    <div class="row">
+                        <div class="col">
+                            <div class="p-4">
+                                <h4>Manyara</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-4">
+                                <h4>Kilimanjaro</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, </p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-4">
+                                <h4>Serengeti</h4>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-4">
+                                <h4>Mikumi</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, qui,.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="p-4">
+                                <h4>Gombe</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium,</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-4">
+                                <h4>Tarangire</h4>
+                                <p>sldksdlkslkdlskdlskldksld</p>
+                            </div>
+                            <div class="flex flex-colmn">
+
+                            </div>
+                        </div>
+                       <div class="col">
+                            <div class="p-4">
+                                <h4>NgoroNgoro Crater</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, reiciendis facere error exercitationem, officiis possim</p>
+                            </div>
+                            <div class="flex flex-colmn">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='{% static "bootstap/dist/js/bootstrap.min.js"%}'> </script>
+    <script src='{% static "bootstap/dist/js/bootstrap.min.js"%}'> </script>
+    <script src='{% static "js/jquery-3.4.1.min.js"%}'> </script>
+    <script src='{% static "js/particle.js"%}'> </script>
+    <script src='{% static "js/app.js"%}'> </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
