@@ -3,7 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<!-- <meta name="viewport" content="width=device=width=initial-scale=1.0"> -->
+<meta name="viewport" content="width=device=width=initial-scale=1.0">
 
 <head>
     <meta charset="UTF-8">
@@ -15,20 +15,17 @@
 </head>
 
 <body>
-
+    <div class="header">
+        <img src='{%static  "/images/land1.png"%}' alt="" style="height: 150px; ">
+        <h1>Bel-Land Safaries</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </div>
     <nav class="navbar  navbar-expand-sm   navbar-dark" style="height: 150px; z-index:50;">
-        <!-- <h4 class="text-center my-auto">Bel-LandSafaries</h4> -->
+        
         <div class="container">
-            <a href="{%url 'home'%}" class="navbar-brand">
-                <div class="d-flex flex-row">
-                    <div class="align-self-start ">
-                        <img src='{%static  "/images/land1.png"%}' alt="" style="height: 150px; ">
-                    </div>
-                    <div class="align-self-end d-none d-lg-block ">
-                        <h4 class=" brand text-center text-dark  " style="height: 90px;">Bel-Land Safaries</h4>
-                    </div>
-
-                </div>
+            <a href="{%url 'home'%}" class="navbar-brand text-dark">
+                Home
+               
 
             </a>
             <button class="navbar-toggler bg-dark" data-toggle="collapse" data-target="#homemenu">
@@ -56,13 +53,48 @@
             </div>
         </div>
     </nav>
-    {% block content %}
+    <div class="row1 ">
+        <div class="leftcolumn">
 
-    {% endblock content %}
+            {% block content %}
+
+            {% endblock content %}
+
+        </div>
+        <div class="rightcolumn">
+            <div class="card1">
+                <h2>About Me</h2>
+                <div class="fakeimg" style="height:100px;">Image</div>
+                <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+            </div>
+            <div class="card">
+                <h3>Packages</h3>
+                <div class="fakeimg">
+                    <p>Image</p>
+                </div>
+                <div class="fakeimg">
+                    <p>Image</p>
+                </div>
+                <div class="fakeimg">
+                    <p>Image</p>
+                </div>
+            </div>
+            <div class="card1">
+                <h3>Top parks</h3>
+                <ul class="list-group">
+                    <li class="list-group-item ">Serengeti National Park</li>
+                    <li class="list-group-item">NgoroNgoro Crater</li>
+                    <li class="list-group-item">Mikumi National Park</li>
+                    <li class="list-group-item">Arusha National Park</li>
+                    <li class="list-group-item">Kilimanjaro National Park</li>
+                  </ul>
+            </div>
+        </div>
 
 
-
-    <footer class="footer text-white bg-dark">
+    </div>
+   
+    <div class="footer text-white d-block w-100" style=" background-color:rgb(43, 27, 27)">
         <div class="row justify-content-center">
             <div class="col text-center">
                 <div class="d-flex flex-row justify-content-center pt-3">
@@ -91,7 +123,10 @@
 
             </div>
         </div>
-    </footer>
+    </div>
+
+
+
     <div class="modal  " id="destinations">
         <div class="modal-dialog modal-xl " role="document">
             <div class="modal-content">
@@ -126,7 +161,7 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, qui,.</p>
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="row">
                         <div class="col">
@@ -144,10 +179,11 @@
 
                             </div>
                         </div>
-                       <div class="col">
+                        <div class="col">
                             <div class="p-4">
                                 <h4>NgoroNgoro Crater</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, reiciendis facere error exercitationem, officiis possim</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, reiciendis facere error
+                                    exercitationem, officiis possim</p>
                             </div>
                             <div class="flex flex-colmn">
 
@@ -160,6 +196,7 @@
             </div>
         </div>
     </div>
+    
     <script src='{% static "bootstap/dist/js/bootstrap.min.js"%}'> </script>
     <script src='{% static "bootstap/dist/js/bootstrap.min.js"%}'> </script>
     <script src='{% static "js/jquery-3.4.1.min.js"%}'> </script>
