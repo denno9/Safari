@@ -6,6 +6,7 @@ class ParksModel(models.Model):
     image = models.ImageField(upload_to='photos/%Y/%m/%d')
     subtitle = models.CharField(max_length=300)
     description = models.CharField(max_length=5000)
+    top = models.BooleanField(default=False)
 
 
 

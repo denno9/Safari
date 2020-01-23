@@ -20,4 +20,5 @@ class Contact(models.Model):
     #     data = self.cleaned_data
     #     email = self.cleaned_data.get('email')
     #     email2 Contact.objects.get('email')
-    #     if email in email2
+    #     if email in email2:
+    #         return 

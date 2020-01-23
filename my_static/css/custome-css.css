@@ -77,9 +77,10 @@ input{
     background-color: black
 }
 .card-body{
-    
+  background-color: whitesmoke;
     border:0;
     color: black;
+    font-weight: bolder;
     padding-top: 0;
 
 }
@@ -176,6 +177,7 @@ input{
     font-family: Arial;
     padding: 10px;
     background: #f1f1f1;
+    opacity: 0.9;
   }
   
   /* Header */
