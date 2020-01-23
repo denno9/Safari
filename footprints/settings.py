@@ -25,7 +25,7 @@ SECRET_KEY = 'ver*d&s+*6hyhs15c&c3-ysooopocrk0*wo7+*d(c02&w@(q=b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.110','127.0.0.0','localhost',' 192.168.0.179']
+ALLOWED_HOSTS = ['192.168.1.110','127.0.0.0','localhost',' 192.168.0.179', 'bellandsafaris.herokuapp.com']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -132,3 +133,8 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static_cdn","static_root")
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static_cdn","media_root")
+
+
+import dj_database_url 
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
