@@ -1,0 +1,1 @@
+web: gunicorn bellandsafaris.wsgi --log-file -
