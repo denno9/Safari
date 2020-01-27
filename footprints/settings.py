@@ -32,6 +32,8 @@ ALLOWED_HOSTS = ['192.168.1.110','127.0.0.0','localhost',' 192.168.0.179', 'bell
 # Application definition
 
 INSTALLED_APPS = [
+    'djangocms_history',
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Contact',
+    
 ]
+SITE_ID = 1
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
